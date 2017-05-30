@@ -1,4 +1,5 @@
-
+var $ = require('jquery')
+require('jquery-ui');
 var App = App || {};
 
 App.Autocomplete = (function(App){

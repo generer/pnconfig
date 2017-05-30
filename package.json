@@ -1,6 +1,6 @@
 {
   "name": "pnconfig",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "repository for system javascript",
   "main": "index.js",
   "scripts": {
