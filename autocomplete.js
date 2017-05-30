@@ -319,19 +319,12 @@ App.Autocomplete = (function(App){
 	}
 	
 	return{
-		SetupAutoComplete:function()
+		SetupAutoComplete:function(theConfig,callback)
 		{
-
-			_Config = App_Config.Config.GetConfig();
+			_Config = theConfig;
 			locationService = _Config.LocationService;
-			Setup.Autocomplete();
-			/*
-			if(Post.Util.getQuery('bcid')=="imerco"){
-				Setup.AutocompleteBackup();
-			}else{
-				Setup.Autocomplete();
-			}
-			*/
+			Setup.Autocomplete(callback);
+			
 		},
 		SetupAutoCompleteBackup:function()
 		{
