@@ -1,3 +1,4 @@
+var $ = require('jquery')
 var App = App || {};
 App.ErrorHandler = (function(App){
 
@@ -61,4 +62,4 @@ App.ErrorHandler = (function(App){
 	}
 })(App);
 
-module.exports = App;
+module.exports = App.ErrorHandler;

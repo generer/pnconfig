@@ -159,7 +159,7 @@ App.Autocomplete = (function(App){
 				
 			});
 			
-
+			callback();
 		},
 		AutocompleteBackup:function()
 		{
@@ -336,4 +336,4 @@ App.Autocomplete = (function(App){
 	}
 })(App);
 
-module.exports = App;
+module.exports = App.Autocomplete;

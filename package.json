@@ -1,6 +1,6 @@
 {
   "name": "pnconfig",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "repository for system javascript",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/generer/pnconfig/issues"
   },
-  "homepage": "https://github.com/generer/pnconfig#readme"
+  "homepage": "https://github.com/generer/pnconfig#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-ui-dist": "^1.12.1",
+    "simple-ajax": "^2.6.0"
+  }
 }

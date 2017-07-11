@@ -122,66 +122,6 @@ App.Util = (function (App)
 			}
 			return strDisplay;
 		},
-		showTransperent: function(sw){
-			if(sw==0){
-				var h = $(window).height();
-				var w = $(window).width();
-				$("body").append('<div class="transparent"></div>');
-				$(".transparent").css("height",h);
-				$(".transparent").css("width",w );
-			
-			}else{
-				$(".transparent").remove()
-			}
-		},
-		showPop: function(txt,bnts,sw){
-			var self = this;
-			$(".popups").remove();
-			if(sw==0){
-				self.showTransperent(0);
-				var html = '<div class="popups" id="pop_reject">' +
-							'<p id="popcontent">'+txt+'</p><p class="bntrow">' + bnts + '</p></div>'
-				$("body").append(html);
-				if(String(txt).length>100){
-					$(".popups").css('width','500px');
-				}
-				
-				var w =  $("body").width();
-				var pw = $(".popups").width();
-				$(".popups").css("left",((w/2)-(pw/2)));
-				var p = (window.pageYOffset) ? window.pageYOffset : document.documentElement.scrollTop;
-				$(".popups").css("top",p+(Math.floor($(window).height()/5)));
-			}
-		},
-		showMessage: function(message,callback,type){
-			var self = this;
-			error = (arguments[1]==undefined) ? "default" :	arguments[1];
-			$('#loading').hide();
-			switch(type){
-				case "parameter":
-					self.showPop(message,'',0);
-					break;
-				case "form":
-					self.showPop(message,'',0);
-					break;	
-				case "address":
-					self.showPop(message,'<button id="bnt_ok" onclick="App.Util.showTransperent(1);App.Util.showPop(1);App.Permissions.sendBeforeSave()">Luk</button>',0);
-					
-					break;
-				case "network":
-					self.showPop(message,'',0);
-					break;	
-				case "mail":
-					self.showPop(message,'',0);
-					break;
-				case "savedata":
-					self.showPop(message,'',0);
-					break;		
-				default:
-					self.showPop(message,'<button id="bnt_ok" onclick="App.Util.showTransperent(1);App.Util.showPop(1);">Luk</button>',0);
-					break;		
-			}
-		},
 		restrictInteger: function (evt){
 			evt = (evt) ? evt : window.event
 			var charCode = (evt.which) ? evt.which : evt.keyCode;
@@ -225,4 +165,4 @@ App.Util = (function (App)
 	}
 })(App);
 
-module.exports = App;
+module.exports = App.Util;

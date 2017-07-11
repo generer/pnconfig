@@ -1,8 +1,8 @@
-var System = require('./system.js')
+var Ajax = require('./ajax.js')
 var Error = require('./errorhandler.js')
-var Post = require('./util.js');
+var Util = require('./util.js');
 var Autocomplete = require('./autocomplete.js');
 
 
 
-module.exports = {"System":System,"Error":Error,"Post":Post,"Autocomplete":Autocomplete}
+module.exports = {"Ajax":Ajax,"Error":Error,"Util":Util,"Autocomplete":Autocomplete}
