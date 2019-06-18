@@ -3,6 +3,11 @@ var Error = require('./errorhandler.js')
 var Util = require('./util.js');
 var Autocomplete = require('./autocomplete.js');
 
-var thisisatest = false;
+var thisisatest = true;
 
-module.exports = {"Ajax":Ajax,"Error":Error,"Util":Util,"Autocomplete":Autocomplete}
+module.exports = {
+    "Ajax": Ajax,
+    "Error": Error,
+    "Util": Util,
+    "Autocomplete": Autocomplete
+}
